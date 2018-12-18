@@ -30,33 +30,34 @@
       app
     >
       <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-btn
+      <!-- <v-btn
         icon
         @click.stop="miniVariant = !miniVariant"
       >
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'" />
-      </v-btn>
-      <v-btn
+      </v-btn> -->
+      <!-- <v-btn
         icon
         @click.stop="clipped = !clipped"
       >
         <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn
+      </v-btn> -->
+      <!-- <v-btn
         icon
         @click.stop="fixed = !fixed"
       >
         <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"/>
-      <v-btn
+      </v-btn> -->
+      <!-- <v-toolbar-title v-text="title"/> -->
+      <!-- <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>menu</v-icon>
-      </v-btn>
+      </v-btn> -->
+      <span class="title">The Extractor</span>
     </v-toolbar>
-    <v-content>
+    <v-content class="vcontent">
       <v-container>
         <nuxt />
       </v-container>
@@ -76,12 +77,12 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer
+    <!-- <v-footer
       :fixed="fixed"
       app
     >
       <span>&copy; 2017</span>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
@@ -93,8 +94,8 @@
         drawer: true,
         fixed: false,
         items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+          { icon: 'home', title: 'Home', to: '/' },
+          { icon: 'textsms', title: 'New Text', to: '/sendAText' }
         ],
         miniVariant: false,
         right: true,
@@ -104,3 +105,14 @@
     }
   }
 </script>
+
+<style scoped>
+ .vcontent {
+    background-color: brown
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+</style>
