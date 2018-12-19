@@ -94,8 +94,7 @@
         drawer: true,
         fixed: false,
         items: [
-          { icon: 'home', title: 'Home', to: '/' },
-          { icon: 'textsms', title: 'New Text', to: '/sendAText' }
+          { icon: 'home', title: 'Home', to: '/' }
         ],
         miniVariant: false,
         right: true,
