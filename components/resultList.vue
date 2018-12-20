@@ -9,7 +9,7 @@
           color="black"
           class="title"
           dark>
-          <v-toolbar-title>Results</v-toolbar-title>
+          <v-toolbar-title>Results <small>(with scores)</small> </v-toolbar-title>
         </v-toolbar>
         <v-list>
           <v-list-tile
@@ -22,7 +22,7 @@
             </v-list-tile-content>
 
             <v-list-tile-action>
-              <v-list-tile-action-text>{{ result[1] }}</v-list-tile-action-text>
+              <v-list-tile-action-text>({{ result[1] }})</v-list-tile-action-text>
             </v-list-tile-action>
 
           </v-list-tile>
@@ -35,19 +35,22 @@
 
 
 <script>
-  export default {
-    props: {
-      resultkeywords: {
-        type: Array,
-        required: true
-      },
+import numeral from 'numeral'
+
+export default {
+  props: {
+    resultkeywords: {
+      type: Array,
+      required: true
     },
-    computed: {
-      results: function() {
-        return this.resultkeywords
-      }
+  },
+  computed: {
+    results: function() {
+      let arr = this.resultkeywords
+      return arr.map(x => [x[0],numeral(x[1]).format('0.000')] )
     }
   }
+}
 </script>
 
 <style >

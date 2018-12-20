@@ -29,7 +29,7 @@
           v-model="text"
           :rules="textRules"
           :counter="100000"
-          label="Text: the text you want to extract keywords from"
+          label="Text: the text you want to extract keywords from - must be in french"
           required
         />
         <br>
@@ -105,12 +105,12 @@
 
 <script>
 import axios from 'axios'
-import logo from '../components/logo.vue'
+import logo2 from '../components/logo2.vue'
 import resultList from '../components/resultList.vue'
 
 export default {
   components: {
-    logo: logo,
+    logo: logo2,
     resultList: resultList
   },
   data () {
@@ -145,8 +145,8 @@ export default {
       if (this.$refs.form.validate()) {
 
         let method = (this.$refs.method && this.$refs.method.value) ? this.$refs.method.value : "sgrank"
-        let normalize = (this.$refs.normalize && this.$refs.normalize.value) ? this.$refs.normalize.value : "lemma"
-        let n_keyterms = (this.$refs.n_keyterms && this.$refs.n_keyterms.value) ? this.$refs.n_keyterms.value : 3
+        let normalize = (this.$refs.normalize && this.$refs.normalize.value) ? this.$refs.normalize.value : null
+        let n_keyterms = (this.$refs.n_keyterms && this.$refs.n_keyterms.value) ? this.$refs.n_keyterms.value : 10
         let ngrams = (this.$refs.ngrams && this.$refs.ngrams.value) ? this.$refs.ngrams.value : 0
         let text = (this.$refs.text && this.$refs.text.value) ? this.$refs.text.value : ''
 
