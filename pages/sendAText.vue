@@ -167,7 +167,9 @@ export default {
         this.isLoading = true
         let thisBis = this
         this.$refs.form.reset()
-        axios.post(`${'https://cors-anywhere.herokuapp.com/'}http://keyword-extract-api.herokuapp.com/keywords`,JSON.stringify(data),{
+        // axios.post(`http://localhost:5000/keywords`,JSON.stringify(data),{  // for localhost testing
+        // axios.post(`${'https://cors-anywhere.herokuapp.com/'}http://keyword-extract-api.herokuapp.com/keywords`,JSON.stringify(data),{   // only for testing purposes
+        axios.post(`http://keyword-extract-api.herokuapp.com/keywords`,JSON.stringify(data),{  // for localhost testing
           "headers": {
             "Content-Type": "application/json",
           }

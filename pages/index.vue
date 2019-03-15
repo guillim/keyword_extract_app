@@ -56,7 +56,9 @@ export default {
   mounted () {
     console.log('here');
     let thisBis = this
-    axios.get(`${'https://cors-anywhere.herokuapp.com/'}http://keyword-extract-api.herokuapp.com/status`)
+    // axios.get(`http://localhost:5000/status`)  // for localhost testing
+    // axios.get(`${'https://cors-anywhere.herokuapp.com/'}http://keyword-extract-api.herokuapp.com/status`)  // only for testing purposes
+    axios.get(`http://keyword-extract-api.herokuapp.com/status`)
       .then(function (response) {
         console.log('good',response);
         thisBis.isReady = true
