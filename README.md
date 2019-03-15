@@ -1,22 +1,15 @@
 # keyword_extract_app
 
-> My unreal Nuxt.js project
+> simple Nuxt.js to visualize the Keyword extraction api 
 
-## Build Setup
+## Install
 
 ``` bash
 # install dependencies
-$ yarn install
+$ npm install
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ npm run dev
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
 
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+Easy !
