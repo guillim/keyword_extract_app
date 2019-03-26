@@ -28,7 +28,7 @@
           ref="text"
           v-model="text"
           :rules="textRules"
-          :counter="100000"
+          :counter="7000"
           label="Text: the text you want to extract keywords from - must be in french"
           required
         />
@@ -127,7 +127,7 @@ export default {
       text: '',
       textRules: [
         v => !!v || 'Text is required',
-        v => (v && v.length <= 100000) || 'Text must be less than 100 000 characters',
+        v => (v && v.length <= 7000) || 'Text must be less than 7000 characters',
         v => (v && v.length >= 100) || 'Text must be at least 100 characters'
       ],
       method: '',
