@@ -19,6 +19,9 @@ module.exports = {
     ]
   },
 
+  env: {
+    APIbaseUrl: 'keyword-extract-api.herokuapp.com' || 'localhost:5000'
+  },
   /*
   ** Customize the progress-bar color
   */

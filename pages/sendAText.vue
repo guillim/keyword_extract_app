@@ -169,7 +169,8 @@ export default {
         this.$refs.form.reset()
         // axios.post(`http://localhost:5000/keywords`,JSON.stringify(data),{  // for localhost testing
         // axios.post(`${'https://cors-anywhere.herokuapp.com/'}http://keyword-extract-api.herokuapp.com/keywords`,JSON.stringify(data),{   // only for testing purposes
-        axios.post(`http://keyword-extract-api.herokuapp.com/keywords`,JSON.stringify(data),{  // for localhost testing
+        let endpoint = window.location.protocol + `//` + process.env.APIbaseUrl + `/keywords`
+        axios.post(endpoint,JSON.stringify(data),{  // for localhost testing
           "headers": {
             "Content-Type": "application/json",
           }
