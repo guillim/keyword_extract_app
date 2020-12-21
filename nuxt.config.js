@@ -19,14 +19,12 @@ module.exports = {
     ]
   },
 
-  // env: {
-  //   BASE_URL: 'keyword-extract-api.herokuapp.com' || 'localhost:5000'
-  // },
   publicRuntimeConfig: {
     BASE_URL: process.env.BASE_URL || 'localhost:5000',
+    BASE_URL_PREMIUM:process.env.BASE_URL_PREMIUM || 'localhost:6000'
   },
   privateRuntimeConfig: {
-    API_SECRET: process.env.API_SECRET
+    API_SECRET: process.env.API_SECRET || 'thisisasecretapikey'
   },
   /*
   ** Customize the progress-bar color

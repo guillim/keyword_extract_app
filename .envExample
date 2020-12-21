@@ -1,0 +1,3 @@
+BASE_URL=base-url.herokuapp.com
+BASE_URL_PREMIUM=base-url-premium.herokuapp.com
+API_SECRET=testsecretkey
