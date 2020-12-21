@@ -1,3 +1,5 @@
+// loading vars in .env into process.env
+require('dotenv').config()
 
 const express = require('express')
 const consola = require('consola')

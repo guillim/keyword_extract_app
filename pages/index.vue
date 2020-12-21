@@ -55,7 +55,8 @@ export default {
   },
   mounted () {
     console.log('here');
-    let endpoint = window.location.protocol + `//` + process.env.APIbaseUrl + `/status`
+    console.log(this.$config)
+    let endpoint = window.location.protocol + `//` + process.env.BASE_URL + `/status`
     let thisBis = this
     // axios.get(`http://localhost:5000/status`)  // for localhost testing
     // axios.get(`${'https://cors-anywhere.herokuapp.com/'}http://keyword-extract-api.herokuapp.com/status`)  // only for testing purposes

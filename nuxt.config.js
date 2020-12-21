@@ -19,8 +19,14 @@ module.exports = {
     ]
   },
 
-  env: {
-    APIbaseUrl: 'keyword-extract-api.herokuapp.com' || 'localhost:5000'
+  // env: {
+  //   BASE_URL: 'keyword-extract-api.herokuapp.com' || 'localhost:5000'
+  // },
+  publicRuntimeConfig: {
+    BASE_URL: process.env.BASE_URL || 'localhost:5000',
+  },
+  privateRuntimeConfig: {
+    API_SECRET: process.env.API_SECRET
   },
   /*
   ** Customize the progress-bar color
@@ -73,5 +79,9 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  /*
+  ** remove the "Are you interested in participation?" question after "npm run dev"
+   */
+  telemetry: false
 }
