@@ -97,16 +97,11 @@ export default {
         this.isLoading = true
         let thisBis = this
         this.$refs.form.reset()
-        // does not work yet. need middleware to fetch this
-        // let endpoint = 'https://' + this.$config.BASE_URL_PREMIUM
-        // axios.post(endpoint,JSON.stringify(data),{
-        //   "headers": {
-        //     "Content-Type": "application/json",
-        //     'Content-Length': JSON.stringify(data).length,
-        //     "x-api-key" : this.$config.API_SECRET
-        //   }
-        // })
+
+        let apiPremium = '/api/premium'
+        axios.post(apiPremium,{data: JSON.stringify(text)})
         .then(function (response) {
+          // console.log('response',response);
           thisBis.resultKeywords = response.data.keywords
         })
         .catch(function (error) {

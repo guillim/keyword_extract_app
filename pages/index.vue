@@ -54,7 +54,7 @@ export default {
     }
   },
   mounted () {
-    console.log(this.$config)
+    // console.log(this.$config)
     let endpoint = window.location.protocol + `//` + this.$config.BASE_URL + `/status`
     let thisBis = this
     // axios.get(`http://localhost:5000/status`)  // for localhost testing

@@ -1,6 +1,6 @@
 // loading vars in .env into process.env
 require('dotenv').config()
-
+const bodyParser = require('body-parser')
 const express = require('express')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
@@ -23,7 +23,8 @@ async function start() {
     const builder = new Builder(nuxt)
     await builder.build()
   }
-
+  // for servermiddleware abilty to get the body 
+  app.use(bodyParser.json());
   // Give nuxt middleware to express
   app.use(nuxt.render)
 

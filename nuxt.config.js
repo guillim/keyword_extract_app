@@ -59,6 +59,13 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
+  /**
+   * server middlewares
+   */
+   serverMiddleware: [
+     '~/serverMiddleware/externalService'
+   ],
+
   /*
   ** Build configuration
   */

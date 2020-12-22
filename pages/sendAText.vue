@@ -10,6 +10,12 @@
           <small>
             <em>Use the extractor</em>
           </small>
+          <v-btn
+            nuxt
+            small
+            dark="true"
+            to="/sendATextPremium">access to premium version
+          </v-btn>
         </footer>
       </blockquote>
       <v-form
