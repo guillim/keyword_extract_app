@@ -50,8 +50,22 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-password-protect'
   ],
+
+  passwordProtect: {
+    formPath: '/login',
+    password: process.env.PASSWORD,
+    tokenSeed: 101010,
+    // queryString: '_pw',
+    cookieName: '_password',
+    cookie: {
+      prefix: '',
+      expires: 5
+    },
+    ignoredPaths: ['/public-page']
+  },
   /*
   ** Axios module configuration
   */

@@ -64,6 +64,7 @@ import logo3 from '../components/logo3.vue'
 import resultList from '../components/resultList.vue'
 
 export default {
+  middleware: ['password-protect'],
   components: {
     logo: logo3,
     resultList: resultList

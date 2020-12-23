@@ -94,7 +94,8 @@
         drawer: false,
         fixed: false,
         items: [
-          { icon: 'home', title: 'Home', to: '/' }
+          { icon: 'home', title: 'Home', to: '/' },
+          { icon: 'person', title: 'Login/Logout', to: '/login' }
         ],
         miniVariant: false,
         right: true,

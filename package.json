@@ -20,6 +20,7 @@
     "express": "^4.16.3",
     "numeral": "^2.0.6",
     "nuxt": "^2.14.12",
+    "nuxt-password-protect": "^1.1.0",
     "vuetify": "^1.2.4"
   },
   "devDependencies": {
