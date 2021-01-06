@@ -46,6 +46,7 @@
       </span>
     </v-flex>
     <v-flex v-else>
+      <wordCloud :words="resultKeywords"/>
       <resultList :resultkeywords="resultKeywords"/>
       <div class="layout row">
         <div class="flex xs12 sm6 offset-sm3 forceFlex">
@@ -62,12 +63,14 @@
 import axios from 'axios'
 import logo3 from '../components/logo3.vue'
 import resultList from '../components/resultList.vue'
+import wordCloud from '../components/wordCloud.vue'
 
 export default {
   middleware: ['password-protect'],
   components: {
     logo: logo3,
-    resultList: resultList
+    resultList: resultList,
+    wordCloud: wordCloud
   },
   data () {
     return {
