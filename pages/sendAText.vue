@@ -70,9 +70,9 @@
 
         <v-select
           v-if="checkbox"
-          ref="n_keyterms"
-          v-model="n_keyterms"
-          :items="n_keytermsAvailable"
+          ref="topn"
+          v-model="topn"
+          :items="topnAvailable"
           label="Number of results to display"
         />
 
@@ -137,11 +137,11 @@ export default {
         v => (v && v.length >= 100) || 'Text must be at least 100 characters'
       ],
       method: '',
-      methodAvailable: ['sgrank','textrank','singlerank'],
+      methodAvailable: ['yake','sgrank','textrank','singlerank'],
       normalize: '',
       normalizeAvailable: [null,'lemma'],
-      n_keyterms: '',
-      n_keytermsAvailable: [...Array(100).keys()],
+      topn: '',
+      topnAvailable: [...Array(100).keys()],
       ngrams: '',
       ngramsAvailable: [...Array(10).keys()]
     }
@@ -150,9 +150,9 @@ export default {
     submit () {
       if (this.$refs.form.validate()) {
 
-        let method = (this.$refs.method && this.$refs.method.value) ? this.$refs.method.value : "sgrank"
+        let method = (this.$refs.method && this.$refs.method.value) ? this.$refs.method.value : "yake"
         let normalize = (this.$refs.normalize && this.$refs.normalize.value) ? this.$refs.normalize.value : null
-        let n_keyterms = (this.$refs.n_keyterms && this.$refs.n_keyterms.value) ? this.$refs.n_keyterms.value : 10
+        let topn = (this.$refs.topn && this.$refs.topn.value) ? this.$refs.topn.value : 10
         let ngrams = (this.$refs.ngrams && this.$refs.ngrams.value) ? this.$refs.ngrams.value : 0
         let text = (this.$refs.text && this.$refs.text.value) ? this.$refs.text.value : ''
 
@@ -160,7 +160,7 @@ export default {
           "method": method,
           "params": {
             "normalize": normalize,
-            "n_keyterms": n_keyterms,
+            "topn": topn,
             "ngrams": ngrams
           },
           "text": text
