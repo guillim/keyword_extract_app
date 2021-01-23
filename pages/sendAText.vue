@@ -170,9 +170,11 @@ export default {
         }
         if (ngrams === 0) {
           delete data.params['ngrams']
+        }else{
+          if (method === "yake") {
+            data.params['ngrams'] = [...Array(data.params['ngrams']).keys()]
+          }
         }
-        console.log(this.$refs);
-        console.log(data);
         this.isLoading = true
         let thisBis = this
         this.$refs.form.reset()
