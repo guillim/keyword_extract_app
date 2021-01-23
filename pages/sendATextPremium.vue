@@ -47,7 +47,7 @@
     </v-flex>
     <v-flex v-else>
       <wordCloud :words="resultKeywords"/>
-      <resultList :resultkeywords="resultKeywords"/>
+      <resultList :resultkeywords="resultKeywords.slice(0,10)"/>
       <div class="layout row">
         <div class="flex xs12 sm6 offset-sm3 forceFlex">
           <v-btn @click="goBackToNewText">Back</v-btn>
