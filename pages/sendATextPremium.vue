@@ -51,6 +51,7 @@
       <div class="layout row">
         <div class="flex xs12 sm6 offset-sm3 forceFlex">
           <v-btn @click="goBackToNewText">Back</v-btn>
+          <download :words="resultKeywords"/>
         </div>
       </div>
     </v-flex>
@@ -64,12 +65,14 @@ import axios from 'axios'
 import logo3 from '../components/logo3.vue'
 import resultList from '../components/resultList.vue'
 import wordCloud from '../components/wordCloud.vue'
+import download from '../components/download.vue'
 
 export default {
   middleware: ['password-protect'],
   components: {
     logo: logo3,
     resultList: resultList,
+    download: download,
     wordCloud: wordCloud
   },
   data () {

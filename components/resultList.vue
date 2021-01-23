@@ -9,7 +9,7 @@
           color="black"
           class="title"
           dark>
-          <v-toolbar-title>Results <small>(with scores)</small> </v-toolbar-title>
+          <v-toolbar-title>Results <small>(first ones, with score)</small> </v-toolbar-title>
         </v-toolbar>
         <v-list>
           <v-list-tile
