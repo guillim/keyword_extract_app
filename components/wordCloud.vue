@@ -16,6 +16,7 @@
       :colors="[color]"
       :on-word-click="obj => null"
       :key="key"
+      class="text-xs-center"
       @click="obj => null"
     />
   </div>
@@ -77,7 +78,7 @@ export default {
     methods : {
       fontSizeMapper (word) {
         let v =  (this.scaleIsReverse > 0) ? (100 - word.value) : word.value
-        return Math.sqrt(50 * v + 300)
+        return Math.exp(4.1/100*v) + 9
         // return 50 * v + 10
       }
     }
