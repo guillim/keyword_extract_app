@@ -5,7 +5,7 @@
       text-xs-center>
       <logo/>
       <blockquote class="blockquote">
-        &#8220;Get the juice from your oranges.&#8221;
+        &#8220;Visual texts insights&#8221;
         <footer>
           <small>
             <em>Use the extractor <i>- premium version -</i></em>

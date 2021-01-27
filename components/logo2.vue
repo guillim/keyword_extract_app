@@ -1,6 +1,6 @@
 <template>
   <img
-    src="/tomhanks.gif"
+    src="/freemium.gif"
     class="mb-5">
 </template>
 
