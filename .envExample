@@ -2,3 +2,6 @@ BASE_URL=base-url.herokuapp.com
 BASE_URL_PREMIUM=base-url-premium.herokuapp.com
 API_SECRET=testsecretkey
 PASSWORD=passwordforpremiumcontent
+HOST=0.0.0.0
+NODE_ENV=production
+NPM_CONFIG_PRODUCTION=false
